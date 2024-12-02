@@ -15,14 +15,15 @@ const Header = () => {
   const classes = useStyles();
   const [menu, setMenu] = useState(false);
 
-  const matches = useMediaQuery("(max-width:600px)");
+  const matches = useMediaQuery("(max-width:730px)");
   //////////////////////////
   const handleMenuLClick = () => {
-    setMenu(() => !menu);
+    setMenu(!menu);
   };
   const handleClose = () => {
-    setMenu(() => !menu);
+    setMenu(!menu);
   };
+
   return (
     <Box className={classes.header}>
       {menu ? (
@@ -106,7 +107,7 @@ const useStyles = makeStyles((theme) => ({
     top: "8%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    minWidth: "80%",
+    minWidth: "60%",
     boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.2)",
   },
   linksName: {
