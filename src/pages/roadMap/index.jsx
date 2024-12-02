@@ -1,6 +1,6 @@
-import React from "react";
-import { Box } from "@mui/material";
-import { makeStyles } from "@mui/styles";
+import React from 'react';
+import { Box } from '@mui/material';
+// import { makeStyles } from '@mui/styles';
 
 const Roadmap = () => {
   // const classes = useStyles();
@@ -9,8 +9,8 @@ const Roadmap = () => {
 
 export default Roadmap;
 
-const useStyles = makeStyles((theme) => ({
-  cardBody: {
-    backgroundColor: "transparent",
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   cardBody: {
+//     backgroundColor: "transparent",
+//   },
+// }));
