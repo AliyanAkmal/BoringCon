@@ -9,10 +9,17 @@ const App = () => {
     <Box
       sx={{
         backgroundImage: `url('${backImage}')`,
+<<<<<<< HEAD
         padding: "0rem 4rem",
         height: "100vh",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
+=======
+        padding: '0rem 4rem',
+        // height: '100vh',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+>>>>>>> 0b3c55a (road map)
       }}
     >
       <RouterProvider router={router} />
