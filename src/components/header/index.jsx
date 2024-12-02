@@ -1,31 +1,45 @@
-import { Box, Button, Link, Typography } from "@mui/material";
-import { makeStyles } from "@mui/styles";
-import React from "react";
+import { Box, Button, Link, Typography } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import XIcon from '@mui/icons-material/X';
+import RedditIcon from '@mui/icons-material/Reddit';
+import logo from '../../assets/logo.png';
+import DiscordIcon from '../discordIcon';
 
 const Header = () => {
   const classes = useStyles();
   return (
-    <Box position="sticky" className={classes.header}>
-      <Typography variant="h5" className={classes.toolbar}>
-        Boring Coin
-      </Typography>
-      <Box className={classes.linksName}>
-        <Link href="https://twitter.com" className={classes.link}>
-          Twitter
-        </Link>
-        <Link href="https://t.me" className={classes.link}>
-          Telegram
-        </Link>
-        <Link href="https://reddit.com" className={classes.link}>
-          Reddit
-        </Link>
-        <Link href="https://discord.com" className={classes.link}>
-          Discord
-        </Link>
+    <Box className={classes.header}>
+      <Box sx={{ display: 'flex', gap: 2 }}>
+        <img
+          src={logo}
+          alt=""
+          width={'40px'}
+          height={'40px'}
+          style={{ objectFit: 'cover' }}
+        />
+        <Box className={classes.linksName}>
+          <Link className={classes.link}>Meme Page</Link>
+        </Box>
       </Box>
-      <Button variant="contained" color="secondary" className={classes.button}>
-        Buy
-      </Button>
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+        <Box sx={{ display: 'flex', gap: 1 }}>
+          <XIcon className={classes.icons} />
+          <RedditIcon className={classes.icons} />
+          <TelegramIcon className={classes.icons} />
+          <DiscordIcon className={classes.icons} />
+          {/* <img src={discord} width={'40px'} height={'40px'} alt="" /> */}
+        </Box>
+        <Box>
+          <Button
+            startIcon={<LocalGroceryStoreIcon />}
+            className={classes.button}
+          >
+            buy the crypto
+          </Button>
+        </Box>
+      </Box>
     </Box>
   );
 };
@@ -35,25 +49,61 @@ export default Header;
 /////////
 const useStyles = makeStyles((theme) => ({
   header: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "1rem 4rem",
-    backgroundColor: "#E6E6E2",
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '1rem 2rem',
+    backgroundColor: 'white',
+    borderRadius: '10px',
+    position: 'fixed',
+    top: '8%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    minWidth: '750px',
+    boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)',
   },
   linksName: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    gap: "3rem",
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
   toolbar: {
-    color: "#F9BC6D",
+    color: '#F9BC6D',
   },
   link: {
-    textDecoration: "none !important",
-    fontSize: "18px !important",
-    fontWeight: "600 !important",
-    color: "black !important",
+    textDecoration: 'none !important',
+    fontSize: '17px !important',
+    fontWeight: '400 !important',
+    color: 'black !important',
+    cursor: 'pointer',
+    fontFamily: 'Chewy !important',
+    '&:hover': {
+      textDecoration: 'underline !important',
+    },
+  },
+  button: {
+    backgroundColor: '#f1c898 !important',
+    borderRadius: '10px !important',
+    fontSize: '14px !important',
+    fontWeight: '600',
+    color: '#000000 !important',
+    textTransform: 'capitalize !important',
+    padding: '8px 15px !important',
+    fontFamily: 'Chewy !important',
+    '&:hover': {
+      backgroundColor: '#F9A85C !important',
+    },
+  },
+  icons: {
+    backgroundColor: '#000',
+    color: '#fff',
+    padding: '5px',
+    borderRadius: '10px',
+    fontSize: '18px !important',
+    cursor: 'pointer',
+    transition: 'transform 0.4s ease in', // Smooth scaling transition
+    '&:hover': {
+      transform: 'scale(1.2)', // Scale the whole icon
+    },
   },
 }));
