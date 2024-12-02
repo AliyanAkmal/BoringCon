@@ -1,6 +1,6 @@
-import { Outlet } from 'react-router-dom';
-import { Box } from '@mui/material';
-import Header from '../header';
+import { Outlet } from "react-router-dom";
+import { Box } from "@mui/material";
+import Header from "../header";
 
 const Layout = () => {
   return (
